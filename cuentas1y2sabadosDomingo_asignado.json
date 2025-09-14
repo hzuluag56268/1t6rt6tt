@@ -1,0 +1,294 @@
+{
+  "BANTD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "CDT"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "HLG"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "HZG"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "GCE"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "FCE"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "JIS"
+    }
+  ],
+  "BLPTD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "JLF"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "DJO"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "AFG"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "JMV"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "YIS"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "MAQ"
+    }
+  ],
+  "3D": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "JBV"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "GCE"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "HZG"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "BRS"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "GMT"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "MLS"
+    }
+  ],
+  "NANRD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "DFB"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "BRS"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "GMT"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "ECE"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "MLS"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "FCE"
+    }
+  ],
+  "NLPRD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "JMV"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "JLF"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "AFG"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "YIS"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "MAQ"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "DJO"
+    }
+  ],
+  "NANTD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "GCE"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "MLS"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "JIS"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "BRS"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "CDT"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "DFB"
+    }
+  ],
+  "NLPTD": [
+    {
+      "fecha": "2025-10-05",
+      "trabajador": "DJO"
+    },
+    {
+      "fecha": "2025-10-12",
+      "trabajador": "JMV"
+    },
+    {
+      "fecha": "2025-10-13",
+      "trabajador": "AFG"
+    },
+    {
+      "fecha": "2025-10-19",
+      "trabajador": "JLF"
+    },
+    {
+      "fecha": "2025-10-26",
+      "trabajador": "YIS"
+    },
+    {
+      "fecha": "2025-11-02",
+      "trabajador": "MAQ"
+    }
+  ],
+  "6R": [
+    {
+      "fecha": "2025-10-04",
+      "trabajador": "GMT"
+    },
+    {
+      "fecha": "2025-10-11",
+      "trabajador": "MLS"
+    },
+    {
+      "fecha": "2025-10-18",
+      "trabajador": "GCE"
+    },
+    {
+      "fecha": "2025-10-25",
+      "trabajador": "FCE"
+    },
+    {
+      "fecha": "2025-11-01",
+      "trabajador": "HLG"
+    }
+  ],
+  "6RT": [
+    {
+      "fecha": "2025-10-04",
+      "trabajador": "DJO"
+    },
+    {
+      "fecha": "2025-10-11",
+      "trabajador": "YIS"
+    },
+    {
+      "fecha": "2025-10-18",
+      "trabajador": "AFG"
+    },
+    {
+      "fecha": "2025-10-25",
+      "trabajador": "MAQ"
+    },
+    {
+      "fecha": "2025-11-01",
+      "trabajador": "JMV"
+    }
+  ],
+  "3": [
+    {
+      "fecha": "2025-10-04",
+      "trabajador": "DFB"
+    },
+    {
+      "fecha": "2025-10-11",
+      "trabajador": "JBV"
+    },
+    {
+      "fecha": "2025-10-18",
+      "trabajador": "HLG"
+    },
+    {
+      "fecha": "2025-10-25",
+      "trabajador": "GMT"
+    },
+    {
+      "fecha": "2025-11-01",
+      "trabajador": "HZG"
+    }
+  ],
+  "6T": [
+    {
+      "fecha": "2025-10-04",
+      "trabajador": "ECE"
+    },
+    {
+      "fecha": "2025-10-11",
+      "trabajador": "DFB"
+    },
+    {
+      "fecha": "2025-10-18",
+      "trabajador": "JIS"
+    },
+    {
+      "fecha": "2025-10-25",
+      "trabajador": "GMT"
+    },
+    {
+      "fecha": "2025-11-01",
+      "trabajador": "JBV"
+    }
+  ],
+  "6TT": [
+    {
+      "fecha": "2025-10-04",
+      "trabajador": "JMV"
+    },
+    {
+      "fecha": "2025-10-11",
+      "trabajador": "MAQ"
+    },
+    {
+      "fecha": "2025-10-18",
+      "trabajador": "AFG"
+    },
+    {
+      "fecha": "2025-10-25",
+      "trabajador": "DJO"
+    },
+    {
+      "fecha": "2025-11-01",
+      "trabajador": "YIS"
+    }
+  ]
+}

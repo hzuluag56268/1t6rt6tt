@@ -1,0 +1,68 @@
+turno	trabajador	fecha_original	fecha_final(DOW-MM)	columna	tipo	motivo
+6R	HLG	2025-11-01			no_asignado	Sin fecha viable (ocupado o restricciones)
+6RT	DJO	2025-10-04			no_asignado	Sin fecha viable (ocupado o restricciones)
+6TT	YIS	2025-11-01			no_asignado	Sin fecha viable (ocupado o restricciones)
+3	HLG	2025-10-18	SAT-11	14	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
+3	HZG	2025-11-01	SAT-25	28	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
+6TT	AFG	2025-10-18	SAT-01	35	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
+6TT	DJO	2025-10-25	SAT-11	14	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
+6TT	JMV	2025-10-04	SAT-18	21	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
+3	DFB	2025-10-04	SAT-18	21	intercambio	
+3	GMT	2025-10-25	SAT-01	35	intercambio	
+3	JBV	2025-10-11	SAT-04	7	intercambio	
+3D	GCE	2025-10-12	SUN-02	36	intercambio	
+3D	GMT	2025-10-26	MON-13	16	intercambio	
+3D	HZG	2025-10-13	SUN-12	15	intercambio	
+3D	JBV	2025-10-05	SUN-26	29	intercambio	
+3D	MLS	2025-11-02	SUN-05	8	intercambio	
+6R	FCE	2025-10-25	SAT-04	7	intercambio	
+6R	GCE	2025-10-18	SAT-25	28	intercambio	
+6R	GMT	2025-10-04	SAT-18	21	intercambio	
+6RT	JMV	2025-11-01	SAT-25	28	intercambio	
+6RT	MAQ	2025-10-25	SAT-11	14	intercambio	
+6RT	YIS	2025-10-11	SAT-04	7	intercambio	
+6T	DFB	2025-10-11	SAT-04	7	intercambio	
+6T	ECE	2025-10-04	SAT-25	28	intercambio	
+6T	GMT	2025-10-25	SAT-11	14	intercambio	
+6TT	MAQ	2025-10-11	SAT-25	28	intercambio	
+BANTD	CDT	2025-10-05	SUN-19	22	intercambio	
+BANTD	FCE	2025-10-26	SUN-12	15	intercambio	
+BANTD	GCE	2025-10-19	MON-13	16	intercambio	
+BANTD	HLG	2025-10-12	SUN-02	36	intercambio	
+BANTD	HZG	2025-10-13	SUN-26	29	intercambio	
+BANTD	JIS	2025-11-02	SUN-05	8	intercambio	
+BLPTD	AFG	2025-10-13	SUN-02	36	intercambio	
+BLPTD	DJO	2025-10-12	SUN-19	22	intercambio	
+BLPTD	JLF	2025-10-05	SUN-26	29	intercambio	
+BLPTD	JMV	2025-10-19	MON-13	16	intercambio	
+BLPTD	MAQ	2025-11-02	SUN-05	8	intercambio	
+BLPTD	YIS	2025-10-26	SUN-12	15	intercambio	
+NANRD	BRS	2025-10-12	SUN-26	29	intercambio	
+NANRD	DFB	2025-10-05	SUN-12	15	intercambio	
+NANRD	ECE	2025-10-19	SUN-02	36	intercambio	
+NANRD	FCE	2025-11-02	SUN-05	8	intercambio	
+NANRD	GMT	2025-10-13	SUN-19	22	intercambio	
+NANRD	MLS	2025-10-26	MON-13	16	intercambio	
+NANTD	BRS	2025-10-19	MON-13	16	intercambio	
+NANTD	CDT	2025-10-26	SUN-12	15	intercambio	
+NANTD	DFB	2025-11-02	SUN-05	8	intercambio	
+NANTD	GCE	2025-10-05	SUN-26	29	intercambio	
+NANTD	JIS	2025-10-13	SUN-19	22	intercambio	
+NANTD	MLS	2025-10-12	SUN-02	36	intercambio	
+NLPRD	AFG	2025-10-13	SUN-26	29	intercambio	
+NLPRD	DJO	2025-11-02	SUN-12	15	intercambio	
+NLPRD	JLF	2025-10-12	SUN-19	22	intercambio	
+NLPRD	JMV	2025-10-05	SUN-02	36	intercambio	
+NLPRD	MAQ	2025-10-26	MON-13	16	intercambio	
+NLPRD	YIS	2025-10-19	SUN-05	8	intercambio	
+NLPTD	AFG	2025-10-13	SUN-19	22	intercambio	
+NLPTD	DJO	2025-10-05	MON-13	16	intercambio	
+NLPTD	JLF	2025-10-19	SUN-05	8	intercambio	
+NLPTD	JMV	2025-10-12	SUN-26	29	intercambio	
+NLPTD	MAQ	2025-11-02	SUN-12	15	intercambio	
+NLPTD	YIS	2025-10-26	SUN-02	36	intercambio	
+3D	BRS	2025-10-19	SUN-19	22	directa	
+6R	MLS	2025-10-11	SAT-11	14	directa	
+6RT	AFG	2025-10-18	SAT-18	21	directa	
+6T	JBV	2025-11-01	SAT-01	35	directa	
+6T	JIS	2025-10-18	SAT-18	21	directa	

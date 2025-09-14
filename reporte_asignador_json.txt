@@ -1,0 +1,40 @@
+turno	trabajador	fecha_original	fecha_final(DOW-MM)	columna	tipo	motivo
+BANTD	HZG	2025-08-07	MON-18	16	intercambio	
+BANTD	GCE	2025-08-10	SUN-17	15	intercambio	
+BANTD	JBV	2025-08-17	SUN-10	8	intercambio	
+BANTD	JIS	2025-08-18	THU-07	5	intercambio	
+BLPTD	AFG	2025-08-07			no_asignado	Sin fecha viable (ocupado o restricciones)
+BLPTD	DJO	2025-08-10	SUN-17	15	intercambio	
+BLPTD	MAQ	2025-08-17	SUN-10	8	intercambio	
+BLPTD	JMV	2025-08-18	THU-07	5	intercambio	
+NANRD	GMT	2025-08-07	MON-18	16	intercambio	
+NANRD	ECE	2025-08-10	SUN-17	15	intercambio	
+NANRD	MLS	2025-08-17	SUN-10	8	intercambio	
+NANRD	FCE	2025-08-18	THU-07	5	intercambio	
+NLPRD	AFG	2025-08-07			no_asignado	Sin fecha viable (ocupado o restricciones)
+NLPRD	JMV	2025-08-10	SUN-17	15	intercambio	
+NLPRD	JLF	2025-08-17	SUN-10	8	intercambio	
+NLPRD	YIS	2025-08-18	THU-07	5	intercambio	
+NANTD	JIS	2025-08-07	MON-18	16	intercambio	
+NANTD	BRS	2025-08-10	SUN-17	15	intercambio	
+NANTD	CDT	2025-08-17	SUN-10	8	intercambio	
+NANTD	DFB	2025-08-18	THU-07	5	intercambio	
+NLPTD	AFG	2025-08-07			no_asignado	Sin fecha viable (ocupado o restricciones)
+NLPTD	DJO	2025-08-10	SUN-10	8	directa	
+NLPTD	JMV	2025-08-17	MON-18	16	intercambio	
+NLPTD	JLF	2025-08-18	THU-07	5	intercambio	
+6R	JBV	2025-08-09	SAT-16	14	intercambio	
+6R	WGG	2025-08-16	SAT-23	21	intercambio	
+6R	ECE	2025-08-23	SAT-09	7	intercambio	
+6RT	AFG	2025-08-09			no_asignado	Sin fecha viable (ocupado o restricciones)
+6RT	JMV	2025-08-16	SAT-09	7	intercambio	
+6RT	DJO	2025-08-23	SAT-16	14	intercambio	
+3	ECE	2025-08-09	SAT-23	21	intercambio	
+3	FCE	2025-08-16	SAT-09	7	intercambio	
+3	GCE	2025-08-23	SAT-16	14	intercambio	
+6T	JBV	2025-08-09	SAT-09	7	directa	
+6T	MLS	2025-08-16	SAT-23	21	intercambio	
+6T	BRS	2025-08-23	SAT-16	14	intercambio	
+6TT	AFG	2025-08-09			no_asignado	Sin fecha viable (ocupado o restricciones)
+6TT	YIS	2025-08-16	SAT-09	7	intercambio	
+6TT	JMV	2025-08-23	SAT-23	21	directa	
