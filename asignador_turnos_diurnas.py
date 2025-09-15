@@ -112,7 +112,7 @@ class AsignadorTurnosDiurnas:
             # Turnos completos
             "VACA", "COME", "COMT", "COMS",
             # Turnos adicionales originales
-            "SIND", "CMED", "CERT",
+            "SIND", "CMED", "CERT",  "LICR",
             # Formación, instrucción y entrenamiento
             "CAPA", "MCAE", "TCAE", "MCHC", "TCHC", "NCHC", "ACHC",
             "MENT", "TENT", "NENT", "AENT",

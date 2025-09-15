@@ -7,9 +7,9 @@ turno	trabajador	fecha_original	fecha_final(DOW-MM)	columna	tipo	motivo
 6TT	AFG	2025-10-18	SAT-01	35	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
 6TT	DJO	2025-10-25	SAT-11	14	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
 6TT	JMV	2025-10-04	SAT-18	21	blanda	Asignado aceptando violación blanda (BLPTD/BANTD al día siguiente)
-3	DFB	2025-10-04	SAT-18	21	intercambio	
+3	DFB	2025-10-04	SAT-18	21	intercambi
 3	GMT	2025-10-25	SAT-01	35	intercambio	
-3	JBV	2025-10-11	SAT-04	7	intercambio	
+3	JBV	2025-10-11	SAT-04	7	intercambi
 3D	GCE	2025-10-12	SUN-02	36	intercambio	
 3D	GMT	2025-10-26	MON-13	16	intercambio	
 3D	HZG	2025-10-13	SUN-12	15	intercambio	
