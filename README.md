@@ -220,4 +220,5 @@ generadorDescFiles/
 **Versión**: 2.1  
 **Última actualización**: Asignación 6TT con rebalanceo (±1) y columna 6RT+6TT  
 **Compatibilidad**: Excel 2016+  
-**Python**: 3.7+ 
+**Python**: 3.7+ #   F e a t u r e :   I m p r o v e d   S c h e d u l e   C o l o r s  
+ 
