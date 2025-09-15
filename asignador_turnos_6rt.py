@@ -259,7 +259,7 @@ class AsignadorTurnos6RT:
                     and (valor_min is None or str(valor_min).strip() == "")
                     and self._es_celda_originalmente_vacia(fila_min, col)
                     and not self._es_celda_original_6rt(fila_max, col)
-                    and not self._existe_7_en_dia(col)
+                    and not self._existe_6rt_o_7_en_dia(col)
                     and self._determinar_asignacion_por_personal(col)
                     and not self._tiene_extra_manana(trabajador_min, col)
                 ):
@@ -433,22 +433,22 @@ class AsignadorTurnos6RT:
 
             # DESC + TROP
             formula_desc = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"DESC")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"TROP")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"DESC")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"TROP")'
             )
             ws_stats.cell(row=fila_destino, column=2, value=formula_desc)
 
             # 1T = 1T + 7
             formula_1t = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"1T")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"7")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"1T")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"7")'
             )
             ws_stats.cell(row=fila_destino, column=3, value=formula_1t)
 
             # 6RT = 6RT + 7
             formula_6rt = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"6RT")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"7")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"6RT")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"7")'
             )
             ws_stats.cell(row=fila_destino, column=4, value=formula_6rt)
 
