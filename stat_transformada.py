@@ -189,7 +189,7 @@ class StatTransformada:
             # Contar ocurrencias en la fila correspondiente del horario
             total = 0
             rango_inicio = 2  # Columna B
-            rango_fin = 31    # Columna AE (aproximadamente)
+            rango_fin =32    # Columna AF (aproximadamente)
             
             for patron in countif_matches:
                 for col in range(rango_inicio, min(rango_fin + 1, ws_horario.max_column + 1)):

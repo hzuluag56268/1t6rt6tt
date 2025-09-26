@@ -134,6 +134,9 @@ class AsignadorTurnosDiurnas:
                 valor_limpio = str(cell_value).strip().upper()
                 if valor_limpio not in turnos_no_operativos:
                     count += 1  # No está en lista de no operativos = operativo
+                else:
+                    print("asdfadsfadsfasdfasdfasdfasdf") 
+
         return count
 
     def _existe_turno_conflictivo_en_dia(self, col_dia: int) -> bool:
@@ -213,7 +216,7 @@ class AsignadorTurnosDiurnas:
             # Turnos completos
             "VACA", "COME", "COMT", "COMS",
             # Turnos adicionales originales
-            "SIND", "CMED", "CERT",
+            "SIND", "CMED", "CERT", "LICR"
             # Formación, instrucción y entrenamiento
             "CAPA", "MCAE", "TCAE", "MCHC", "TCHC", "NCHC", "ACHC",
             "MENT", "TENT", "NENT", "AENT",
@@ -477,66 +480,68 @@ class AsignadorTurnosDiurnas:
 
             # DESC + TROP
             formula_desc = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"DESC")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"TROP")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"DESC")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"TROP")'
             )
             ws_stats.cell(row=fila_destino, column=2, value=formula_desc)
 
             # 1T = 1T + 7 + 1
             formula_1t = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"1T")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"7")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"1")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"1T")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"7")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"1")'
             )
             ws_stats.cell(row=fila_destino, column=3, value=formula_1t)
 
             # 6RT = 6RT + 7 + 6R
             formula_6rt = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"6RT")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"7")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"6R")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"6RT")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"7")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"6R")'
             )
             ws_stats.cell(row=fila_destino, column=4, value=formula_6rt)
 
             # 6T = 6TT + 6T
             formula_6t = (
-                f'=COUNTIF({hoja}!B{fila}:AE{fila},"6TT")'
-                f'+COUNTIF({hoja}!B{fila}:AE{fila},"6T")'
+                f'=COUNTIF({hoja}!B{fila}:AF{fila},"6TT")'
+                f'+COUNTIF({hoja}!B{fila}:AF{fila},"6T")'
             )
             ws_stats.cell(row=fila_destino, column=5, value=formula_6t)
 
             # Columna "3" (turnos 3) si existía
             if columna_3_existe:
-                formula_3 = f'=COUNTIF({hoja}!B{fila}:AE{fila},"3")'
+                formula_3 = f'=COUNTIF({hoja}!B{fila}:AF{fila},"3")'
                 ws_stats.cell(row=fila_destino, column=6, value=formula_3)
                 
                 # 6S
-                formula_6s = f'=COUNTIF({hoja}!B{fila}:AE{fila},"6S")'
+                formula_6s = f'=COUNTIF({hoja}!B{fila}:AF{fila},"6S")'
                 ws_stats.cell(row=fila_destino, column=7, value=formula_6s)
 
                 # 6N
-                formula_6n = f'=COUNTIF({hoja}!B{fila}:AE{fila},"6N")'
+                formula_6n = f'=COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
                 ws_stats.cell(row=fila_destino, column=8, value=formula_6n)
 
                 # DIURNA = 6S + 6N
                 formula_diurna = (
-                    f'=COUNTIF({hoja}!B{fila}:AE{fila},"6S")'
-                    f'+COUNTIF({hoja}!B{fila}:AE{fila},"6N")'
+                    f'=COUNTIF({hoja}!B{fila}:AF{fila},"6S")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"6MT")'
                 )
                 ws_stats.cell(row=fila_destino, column=9, value=formula_diurna)
             else:
                 # 6S
-                formula_6s = f'=COUNTIF({hoja}!B{fila}:AE{fila},"6S")'
+                formula_6s = f'=COUNTIF({hoja}!B{fila}:AF{fila},"6S")'
                 ws_stats.cell(row=fila_destino, column=6, value=formula_6s)
 
                 # 6N
-                formula_6n = f'=COUNTIF({hoja}!B{fila}:AE{fila},"6N")'
+                formula_6n = f'=COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
                 ws_stats.cell(row=fila_destino, column=7, value=formula_6n)
 
                 # DIURNA = 6S + 6N
                 formula_diurna = (
-                    f'=COUNTIF({hoja}!B{fila}:AE{fila},"6S")'
-                    f'+COUNTIF({hoja}!B{fila}:AE{fila},"6N")'
+                    f'=COUNTIF({hoja}!B{fila}:AF{fila},"6S")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"6MT")'
                 )
                 ws_stats.cell(row=fila_destino, column=8, value=formula_diurna)
 

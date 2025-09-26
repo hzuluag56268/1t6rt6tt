@@ -23,7 +23,7 @@ def generar_reporte_turnos(ws):
         "7": "BLPT/NLPR",
         "MANRAS": "MANR/ASIG",
         "MCORTS": "MCOR/TASA",
-        "N": "TANA/TASA",
+        "N": "MANA/TANA",
         "S": "MASA/TASA",
         
         # Turnos que ocupan solo la primera columna (se mantienen o se convierten)
@@ -393,7 +393,7 @@ def modificar_horario_con_division_columna():
          * 7 → BLPT/NLPR
          * MANRAS → MANR/ASIG
          * MCORTS → MCOR/TASA
-         * N → TANA/TASA
+         * N → MANA/TANA
          * S → MASA/TASA
        - Turnos que se renombran pero ocupan solo la primera columna:
          * 1T → BLPT
@@ -623,7 +623,7 @@ def modificar_horario_con_division_columna():
     print("  * 7 → BLPT/NLPR")
     print("  * MANRAS → MANR/ASIG")
     print("  * MCORTS → MCOR/TASA")
-    print("  * N → TANA/TASA")
+    print("  * N → MANA/TANA")
     print("  * S → MASA/TASA")
     print("- Turnos que se renombran pero ocupan solo la primera columna:")
     print("  * 1T, BLPTD → BLPT")
