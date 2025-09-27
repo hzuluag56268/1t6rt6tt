@@ -28,6 +28,7 @@ class StatTransformada:
         # Elegir el archivo de entrada según el orden de prioridad
         candidatos = [
             archivo_entrada,
+            #"horarioUnificado_con_sencillos.xlsx",
             "horarioUnificado_con_mofis.xlsx",
             "horarioUnificado_con_diurnas.xlsx",
             "horarioUnificado_con_6t.xlsx",
