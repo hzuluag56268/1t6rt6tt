@@ -366,15 +366,15 @@ def verificar_turnos_requeridos(ws):
                 f.write("❌ TURNOS FALTANTES:\n")
                 for turno in sorted(turnos_faltantes):
                     f.write(f"- {turno}\n")
+                
+                f.write("\nTurnos encontrados:\n")
+                for turno in sorted(turnos_encontrados):
+                    if turno in turnos_requeridos:
+                        f.write(f"✓ {turno}\n")
+                    else:
+                        f.write(f"  {turno}\n")
             else:
                 f.write("✅ Todos los turnos requeridos están presentes.\n")
-            
-            f.write("\nTurnos encontrados:\n")
-            for turno in sorted(turnos_encontrados):
-                if turno in turnos_requeridos:
-                    f.write(f"✓ {turno}\n")
-                else:
-                    f.write(f"  {turno}\n")
             
             f.write("\n" + "="*40 + "\n")
         
