@@ -193,8 +193,10 @@ Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 5 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - VACA: 3 vez(ces)
 
@@ -257,9 +259,11 @@ Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 3 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - SIND: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 2 vez(ces)
 - VACA: 2 vez(ces)
@@ -323,8 +327,10 @@ Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 3 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 3 vez(ces)
 - VACA: 2 vez(ces)
@@ -354,8 +360,10 @@ Turnos presentes:
 Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 1 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 9 vez(ces)
 
@@ -688,7 +696,9 @@ Turnos adicionales encontrados:
 - COME: 2 vez(ces)
 - COMS: 1 vez(ces)
 - DESC: 3 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 4 vez(ces)
 
@@ -717,7 +727,9 @@ Turnos presentes:
 Turnos adicionales encontrados:
 - COME: 2 vez(ces)
 - COMS: 2 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 6 vez(ces)
 
@@ -747,9 +759,11 @@ Turnos adicionales encontrados:
 - COME: 2 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 2 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - SIND: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 4 vez(ces)
 
@@ -778,7 +792,9 @@ Turnos presentes:
 Turnos adicionales encontrados:
 - COMS: 2 vez(ces)
 - DESC: 2 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 6 vez(ces)
 
@@ -805,7 +821,8 @@ Turnos presentes:
 - TAST/SLN3: 1 vez(ces)
 
 Turnos adicionales encontrados:
-- COMS: 2 vez(ces)
+- ???: 1 vez(ces)
+- COMS: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
@@ -869,7 +886,9 @@ Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 7 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 
 ========================================
@@ -958,12 +977,13 @@ Turnos presentes:
 - TLPT/NLPT: 1 vez(ces)
 
 Turnos adicionales encontrados:
--     : 1 vez(ces)
 - COME: 1 vez(ces)
 - COMS: 2 vez(ces)
 - DESC: 3 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 - TROP: 4 vez(ces)
 - VACA: 1 vez(ces)

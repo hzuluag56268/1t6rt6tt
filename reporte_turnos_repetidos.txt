@@ -113,13 +113,6 @@ Día: SAT-25
   2. Fila 22 - Trabajador: DJO
 
 
-Día: SUN-26
------------
-* Turno COMS repetido 2 veces:
-  1. Fila 2 - Trabajador: PHD
-  2. Fila 22 - Trabajador: DJO
-
-
 Día: MON-27
 -----------
 * Turno COMS repetido 2 veces:

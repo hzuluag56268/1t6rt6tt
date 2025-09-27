@@ -26,10 +26,10 @@ b) Turnos que ocupan una columna:
 * BLPTD → BLPT       (Encontrado 5 veces)
 * CMED → CMED       (Encontrado 1 veces)
 * COME → COME       (Encontrado 29 veces)
-* COMS → COMS       (Encontrado 45 veces)
+* COMS → COMS       (Encontrado 44 veces)
 * DESC → DESC       (Encontrado 93 veces)
 * LIBR → LIBR       (Encontrado 0 veces)
-* MANR → MANR       (Encontrado 0 veces)
+* MANR → MANR       (Encontrado 10 veces)
 * MASR → MASR       (Encontrado 0 veces)
 * MN   → MANA       (Encontrado 14 veces)
 * MS   → MASA       (Encontrado 4 veces)
@@ -45,17 +45,17 @@ b) Turnos que ocupan una columna:
 * MCOR (Encontrado 7 veces)
 * TROP (Encontrado 93 veces)
 * X    (Encontrado 3 veces)
+* ???  (Encontrado 1 veces)
 * VACA (Encontrado 28 veces)
+* TANR (Encontrado 11 veces)
 * LICR (Encontrado 3 veces)
 * TLPR (Encontrado 24 veces)
-*      (Encontrado 1 veces)
 * SIND (Encontrado 7 veces)
-* TANR (Encontrado 1 veces)
 * MDBM (Encontrado 4 veces)
 
 3. ESTADÍSTICAS GENERALES:
 -------------------------
-Total de turnos en el archivo: 677
-Turnos con conversión definida: 506
-Turnos sin conversión definida: 171
-Porcentaje de cobertura: 74.74%
+Total de turnos en el archivo: 696
+Turnos con conversión definida: 515
+Turnos sin conversión definida: 181
+Porcentaje de cobertura: 73.99%

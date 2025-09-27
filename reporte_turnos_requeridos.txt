@@ -4,14 +4,11 @@ REPORTE DE VERIFICACIÓN DE TURNOS REQUERIDOS POR DÍA
 
 Día: WED-01
 -----------
-❌ TURNOS FALTANTES:
-- BLPT
-- MLPR/NLPR
-- TLPR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
-  BLPT/NLPR
+✓ BLPT
   COME
   COMS
   DESC
@@ -21,14 +18,17 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-  MLPR/TLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   SIND
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
-✓ TLPT/NLPT
+✓ TLPR
+✓ TLPT
   TROP
   VACA
 
@@ -36,14 +36,11 @@ Turnos encontrados:
 
 Día: THU-02
 -----------
-❌ TURNOS FALTANTES:
-- BLPT
-- MLPR/NLPR
-- TLPR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
-  BLPT/NLPR
+✓ BLPT
   COME
   COMS
   LICR
@@ -51,13 +48,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-  MLPR/TLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
-✓ TLPT/NLPT
+✓ TLPR
+✓ TLPT
   TROP
   VACA
 
@@ -65,14 +65,11 @@ Turnos encontrados:
 
 Día: FRI-03
 -----------
-❌ TURNOS FALTANTES:
-- BLPT
-- MLPR/NLPR
-- TLPR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
-  BLPT/NLPR
+✓ BLPT
   CMED
   COME
   COMS
@@ -81,13 +78,16 @@ Turnos encontrados:
 ✓ MANR
 ✓ MASR
 ✓ MAST/NANR
-  MLPR/TLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
-✓ TLPT/NLPT
+✓ TLPR
+✓ TLPT
   TROP
   VACA
 
@@ -106,14 +106,16 @@ Turnos encontrados:
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 
@@ -125,12 +127,12 @@ Día: SUN-05
 - MANR
 - MASR
 - MAST/NANR
-- MLPR/NLPR
+- MLPR
 - TANR
 - TANT/NANT
 - TASR
 - TLPR
-- TLPT/NLPT
+- TLPT
 
 Turnos encontrados:
 ✓ BANT
@@ -139,8 +141,8 @@ Turnos encontrados:
   MASA/TASA
   NANR
   NANT
-  NLPR
-  NLPT
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TAST/SLN3
   VACA
@@ -150,9 +152,7 @@ Turnos encontrados:
 
 Día: MON-06
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -160,16 +160,20 @@ Turnos encontrados:
   COME
   COMS
   DESC
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   VACA
 
 ========================================
@@ -188,23 +192,23 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   VACA
 
 ========================================
 
 Día: WED-08
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -212,17 +216,21 @@ Turnos encontrados:
   COME
   COMS
   DESC
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   SIND
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 
@@ -243,14 +251,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MDBM
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 
@@ -258,9 +268,7 @@ Turnos encontrados:
 
 Día: FRI-10
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -268,16 +276,20 @@ Turnos encontrados:
   COME
   COMS
   DESC
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 
@@ -285,25 +297,27 @@ Turnos encontrados:
 
 Día: SAT-11
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
 ✓ BLPT
   COME
   COMS
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -314,12 +328,12 @@ Día: SUN-12
 - MANR
 - MASR
 - MAST/NANR
-- MLPR/NLPR
+- MLPR
 - TANR
 - TANT/NANT
 - TASR
 - TLPR
-- TLPT/NLPT
+- TLPT
 
 Turnos encontrados:
 ✓ BANT
@@ -328,8 +342,8 @@ Turnos encontrados:
   MASA
   NANR
   NANT
-  NLPR
-  NLPT
+✓ NLPR
+✓ NLPT
   TANA
   TASA
 ✓ TAST/SLN3
@@ -343,12 +357,12 @@ Día: MON-13
 - MANR
 - MASR
 - MAST/NANR
-- MLPR/NLPR
+- MLPR
 - TANR
 - TANT/NANT
 - TASR
 - TLPR
-- TLPT/NLPT
+- TLPT
 
 Turnos encontrados:
 ✓ BANT
@@ -360,8 +374,8 @@ Turnos encontrados:
   MASA/TASA
   NANR
   NANT
-  NLPR
-  NLPT
+✓ NLPR
+✓ NLPT
   TANA
 ✓ TAST/SLN3
 
@@ -369,14 +383,11 @@ Turnos encontrados:
 
 Día: TUE-14
 -----------
-❌ TURNOS FALTANTES:
-- BLPT
-- MLPR/NLPR
-- TLPR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
-  BLPT/NLPR
+✓ BLPT
   COME
   COMS
   DESC
@@ -385,13 +396,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-  MLPR/TLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
-✓ TLPT/NLPT
+✓ TLPR
+✓ TLPT
 
 ========================================
 
@@ -411,7 +425,9 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   SIND
   TANA
 ✓ TANR
@@ -419,7 +435,7 @@ Turnos encontrados:
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
 
 ========================================
 
@@ -438,14 +454,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -465,14 +483,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MCOR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -490,7 +510,9 @@ Turnos encontrados:
   MASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
 ✓ TANR
 ✓ TANT/NANT
@@ -498,7 +520,7 @@ Turnos encontrados:
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -509,11 +531,11 @@ Día: SUN-19
 - MANR
 - MASR
 - MAST/NANR
-- MLPR/NLPR
+- MLPR
 - TANR
 - TANT/NANT
 - TASR
-- TLPT/NLPT
+- TLPT
 
 Turnos encontrados:
 ✓ BANT
@@ -522,8 +544,8 @@ Turnos encontrados:
   MASA
   NANR
   NANT
-  NLPR
-  NLPT
+✓ NLPR
+✓ NLPT
   TANA
   TASA
 ✓ TAST/SLN3
@@ -547,14 +569,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MDBM
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
 
 ========================================
 
@@ -573,22 +597,22 @@ Turnos encontrados:
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
 
 ========================================
 
 Día: WED-22
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -597,25 +621,27 @@ Turnos encontrados:
   COMS
   DESC
   MANA
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
 
 Día: THU-23
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -623,25 +649,27 @@ Turnos encontrados:
   COME
   COMS
   MANA
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
 
 Día: FRI-24
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -649,26 +677,28 @@ Turnos encontrados:
   COME
   COMS
   DESC
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   SIND
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
 
 Día: SAT-25
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -676,16 +706,20 @@ Turnos encontrados:
   COMS
   DESC
   MANA
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -696,13 +730,14 @@ Día: SUN-26
 - MANR
 - MASR
 - MAST/NANR
-- MLPR/NLPR
+- MLPR
 - TANR
 - TANT/NANT
 - TASR
-- TLPT/NLPT
+- TLPT
 
 Turnos encontrados:
+  ???
 ✓ BANT
 ✓ BLPT
   COMS
@@ -710,8 +745,8 @@ Turnos encontrados:
   MASA
   NANR
   NANT
-  NLPR
-  NLPT
+✓ NLPR
+✓ NLPT
   TANA
   TASA
 ✓ TAST/SLN3
@@ -734,22 +769,22 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MDBM
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
 
 ========================================
 
 Día: TUE-28
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
 ✓ BANT
@@ -758,16 +793,20 @@ Turnos encontrados:
   COMS
   DESC
   MANA
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
 
 ========================================
 
@@ -786,7 +825,9 @@ Turnos encontrados:
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   SIND
   TANA
 ✓ TANR
@@ -794,7 +835,7 @@ Turnos encontrados:
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
 
 ========================================
@@ -815,14 +856,16 @@ Turnos encontrados:
 ✓ MASR
 ✓ MAST/NANR
   MDBM
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA
 ✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 
@@ -830,27 +873,28 @@ Turnos encontrados:
 
 Día: FRI-31
 -----------
-❌ TURNOS FALTANTES:
-- MANR
-- TANR
+✅ Todos los turnos requeridos están presentes.
 
 Turnos encontrados:
-      
 ✓ BANT
 ✓ BLPT
   COME
   COMS
   DESC
+✓ MANR
   MASA/TASA
 ✓ MASR
 ✓ MAST/NANR
-✓ MLPR/NLPR
+✓ MLPR
+✓ NLPR
+✓ NLPT
   TANA/TASA
+✓ TANR
 ✓ TANT/NANT
 ✓ TASR
 ✓ TAST/SLN3
 ✓ TLPR
-✓ TLPT/NLPT
+✓ TLPT
   TROP
   VACA
 

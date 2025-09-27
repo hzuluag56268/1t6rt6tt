@@ -294,8 +294,10 @@ def verificar_turnos_requeridos(ws):
     turnos_requeridos = {
         # Grupo 1
         "BLPT",
-        "MLPR/NLPR",
-        "TLPT/NLPT",
+        "MLPR",
+        "NLPR",
+        "TLPT",
+        "NLPT",
         "TLPR",
         
         # Grupo 2
@@ -313,7 +315,11 @@ def verificar_turnos_requeridos(ws):
     turnos_equivalentes = {
         "MASR/TASR": ["MASR", "TASR"],
         "MANR/TANR": ["MANR", "TANR"],
-        "MANR/ASIG": ["MANR"]
+        "MANR/ASIG": ["MANR"],
+        "MLPR/NLPR": ["MLPR", "NLPR"],
+        "TLPT/NLPT": ["TLPT", "NLPT"],
+        "BLPT/NLPR": ["BLPT", "NLPR"],
+        "MLPR/TLPR": ["MLPR", "TLPR"]
     }
     
     with open('reporte_turnos_requeridos.txt', 'w', encoding='utf-8') as f:
