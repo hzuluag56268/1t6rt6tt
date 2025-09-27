@@ -29,12 +29,24 @@ class AsignadorTurnosSencillos:
         'JBV', 'GMT', 'BRS', 'HZG', 'JIS', 'CDT', 'WGG', 'GCE'
     ]
 
+    # Trabajadores para días con conflictos BLPTD/NANRD
+    TRABAJADORES_PREFERIDOS_CONFLICTOS = ["YIS", "MAQ", "DJO", "AFG", "JLF", "JMV"]
+    TRABAJADORES_ALTERNATIVOS_CONFLICTOS = ['FCE', 'JBV', 'GCE', 'GMT', 'HZG', 'JIS', 'CDT', 'WGG']
+    TRABAJADORES_SEGUNDO_GRUPO_CONFLICTOS = ['HLG', 'ECE', 'DFB', 'MLS', 'FCE', 'JBV', 'GMT', 'BRS', 'HZG', 'JIS', 'CDT', 'WGG', 'GCE']
+
     # Colores para los turnos
     COLOR_MANR = "FF9999"    # Rojo claro
     COLOR_TANR = "FF9999"    # Rojo claro  
     COLOR_MASR = "CC0000"    # Rojo medio oscuro
     COLOR_TASR = "CC0000"    # Rojo medio oscuro
     COLOR_ASIG = "808080"    # Gris medio
+    
+    # Colores para turnos de conflictos
+    COLOR_MLPR = "FFD700"    # Dorado
+    COLOR_TLPR = "FFD700"    # Dorado
+    COLOR_TLPT = "FFD700"    # Dorado
+    COLOR_TANT = "FFA500"    # Naranja
+    COLOR_MAST = "FF4500"    # Naranja rojizo
 
     def __init__(self, archivo_entrada: Optional[str] = None) -> None:
         candidatos = [
@@ -66,6 +78,13 @@ class AsignadorTurnosSencillos:
         self.contador_masr: Dict[str, int] = defaultdict(int)
         self.contador_tasr: Dict[str, int] = defaultdict(int)
         self.contador_asig: Dict[str, int] = defaultdict(int)
+        
+        # Contadores para turnos de conflictos
+        self.contador_mlpr: Dict[str, int] = defaultdict(int)
+        self.contador_tlpr: Dict[str, int] = defaultdict(int)
+        self.contador_tlpt: Dict[str, int] = defaultdict(int)
+        self.contador_tant: Dict[str, int] = defaultdict(int)
+        self.contador_mast: Dict[str, int] = defaultdict(int)
 
         random.seed()
         self._inicializar_contadores_desde_hoja()
@@ -190,6 +209,16 @@ class AsignadorTurnosSencillos:
                     self.contador_tasr[trabajador] += 1
                 elif val == "ASIG":
                     self.contador_asig[trabajador] += 1
+                elif val == "MLPR":
+                    self.contador_mlpr[trabajador] += 1
+                elif val == "TLPR":
+                    self.contador_tlpr[trabajador] += 1
+                elif val == "TLPT":
+                    self.contador_tlpt[trabajador] += 1
+                elif val == "TANT":
+                    self.contador_tant[trabajador] += 1
+                elif val == "MAST":
+                    self.contador_mast[trabajador] += 1
 
     def _seleccionar_equitativo_por_tipo(self, candidatos: List[str], tipo_turno: str) -> Optional[str]:
         if not candidatos:
@@ -206,6 +235,16 @@ class AsignadorTurnosSencillos:
             contador = self.contador_tasr
         elif tipo_turno == "ASIG":
             contador = self.contador_asig
+        elif tipo_turno == "MLPR":
+            contador = self.contador_mlpr
+        elif tipo_turno == "TLPR":
+            contador = self.contador_tlpr
+        elif tipo_turno == "TLPT":
+            contador = self.contador_tlpt
+        elif tipo_turno == "TANT":
+            contador = self.contador_tant
+        elif tipo_turno == "MAST":
+            contador = self.contador_mast
         else:
             return random.choice(candidatos)
         
@@ -225,6 +264,16 @@ class AsignadorTurnosSencillos:
             self.contador_tasr[trabajador] += delta
         elif tipo_turno == "ASIG":
             self.contador_asig[trabajador] += delta
+        elif tipo_turno == "MLPR":
+            self.contador_mlpr[trabajador] += delta
+        elif tipo_turno == "TLPR":
+            self.contador_tlpr[trabajador] += delta
+        elif tipo_turno == "TLPT":
+            self.contador_tlpt[trabajador] += delta
+        elif tipo_turno == "TANT":
+            self.contador_tant[trabajador] += delta
+        elif tipo_turno == "MAST":
+            self.contador_mast[trabajador] += delta
 
     def _asignar_turno(self, trabajador: str, col_dia: int, tipo_turno: str) -> bool:
         """Asigna un turno específico a un trabajador"""
@@ -248,6 +297,16 @@ class AsignadorTurnosSencillos:
             celda.fill = PatternFill(start_color=self.COLOR_TASR, end_color=self.COLOR_TASR, fill_type="solid")
         elif tipo_turno == "ASIG":
             celda.fill = PatternFill(start_color=self.COLOR_ASIG, end_color=self.COLOR_ASIG, fill_type="solid")
+        elif tipo_turno == "MLPR":
+            celda.fill = PatternFill(start_color=self.COLOR_MLPR, end_color=self.COLOR_MLPR, fill_type="solid")
+        elif tipo_turno == "TLPR":
+            celda.fill = PatternFill(start_color=self.COLOR_TLPR, end_color=self.COLOR_TLPR, fill_type="solid")
+        elif tipo_turno == "TLPT":
+            celda.fill = PatternFill(start_color=self.COLOR_TLPT, end_color=self.COLOR_TLPT, fill_type="solid")
+        elif tipo_turno == "TANT":
+            celda.fill = PatternFill(start_color=self.COLOR_TANT, end_color=self.COLOR_TANT, fill_type="solid")
+        elif tipo_turno == "MAST":
+            celda.fill = PatternFill(start_color=self.COLOR_MAST, end_color=self.COLOR_MAST, fill_type="solid")
         
         self._actualizar_contadores(trabajador, tipo_turno, 1)
         return True
@@ -311,6 +370,94 @@ class AsignadorTurnosSencillos:
                 disponibles.remove(elegido)
 
         return asignaciones
+
+    def _obtener_trabajadores_disponibles_conflictos(self, col_dia: int, lista_trabajadores: List[str]) -> List[str]:
+        """Obtiene trabajadores disponibles para días con conflictos"""
+        disponibles: List[str] = []
+        for trabajador in lista_trabajadores:
+            fila = self._obtener_fila_trabajador(trabajador)
+            if not fila:
+                continue
+            celda = self.ws.cell(row=fila, column=col_dia)
+            if (
+                (celda.value is None or str(celda.value).strip() == "")
+                and self._es_celda_originalmente_vacia(fila, col_dia)
+            ):
+                disponibles.append(trabajador)
+        return disponibles
+
+    def asignar_turnos_conflictos_primer_grupo(self, col_dia: int) -> List[str]:
+        """Asigna turnos MLPR, TLPR, TLPT en días con conflictos BLPTD/NANRD"""
+        asignaciones = []
+        turnos_primer_grupo = ["MLPR", "TLPR", "TLPT"]
+        
+        # Obtener trabajadores disponibles preferidos y alternativos
+        disponibles_preferidos = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_PREFERIDOS_CONFLICTOS)
+        disponibles_alternativos = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_ALTERNATIVOS_CONFLICTOS)
+        
+        # Determinar qué lista usar: solo alternativos si NO hay preferidos disponibles
+        if disponibles_preferidos:
+            trabajadores_a_usar = disponibles_preferidos
+        else:
+            trabajadores_a_usar = disponibles_alternativos
+        
+        # Asignar cada turno si hay trabajadores disponibles y el turno no existe
+        for turno in turnos_primer_grupo:
+            if not self._existe_turno_repetido_en_dia(turno, col_dia) and trabajadores_a_usar:
+                elegido = self._seleccionar_equitativo_por_tipo(trabajadores_a_usar, turno)
+                if elegido and self._asignar_turno(elegido, col_dia, turno):
+                    asignaciones.append(f"{turno}→{elegido}")
+                    trabajadores_a_usar.remove(elegido)
+        
+        return asignaciones
+
+    def asignar_turnos_conflictos_segundo_grupo(self, col_dia: int) -> List[str]:
+        """Asigna turnos MANR, TANR, TANT, MAST, MASR, TASR en días con conflictos"""
+        asignaciones = []
+        turnos_segundo_grupo = ["MANR", "TANR", "TANT", "MAST", "MASR", "TASR"]
+        
+        # Obtener trabajadores disponibles del segundo grupo
+        disponibles = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_SEGUNDO_GRUPO_CONFLICTOS)
+        
+        # Asignar cada turno si hay trabajadores disponibles y el turno no existe
+        for turno in turnos_segundo_grupo:
+            if not self._existe_turno_repetido_en_dia(turno, col_dia) and disponibles:
+                elegido = self._seleccionar_equitativo_por_tipo(disponibles, turno)
+                if elegido and self._asignar_turno(elegido, col_dia, turno):
+                    asignaciones.append(f"{turno}→{elegido}")
+                    disponibles.remove(elegido)
+        
+        return asignaciones
+
+    def asignar_turnos_en_dia_con_conflictos(self, col_dia: int) -> List[str]:
+        """Asigna turnos en días con conflictos BLPTD/NANRD"""
+        asignaciones_totales = []
+        
+        # Diagnóstico: obtener información del día
+        header = self.ws.cell(row=1, column=col_dia).value
+        
+        # Primer grupo: MLPR, TLPR, TLPT
+        disponibles_preferidos = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_PREFERIDOS_CONFLICTOS)
+        disponibles_alternativos = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_ALTERNATIVOS_CONFLICTOS)
+        disponibles_segundo_grupo = self._obtener_trabajadores_disponibles_conflictos(col_dia, self.TRABAJADORES_SEGUNDO_GRUPO_CONFLICTOS)
+        
+        print(f"\n🔍 DIAGNÓSTICO {header}:")
+        print(f"   Preferidos disponibles: {len(disponibles_preferidos)} → {disponibles_preferidos}")
+        print(f"   Alternativos disponibles: {len(disponibles_alternativos)} → {disponibles_alternativos}")
+        print(f"   Segundo grupo disponibles: {len(disponibles_segundo_grupo)} → {disponibles_segundo_grupo}")
+        
+        asignaciones_primer_grupo = self.asignar_turnos_conflictos_primer_grupo(col_dia)
+        asignaciones_totales.extend(asignaciones_primer_grupo)
+        
+        # Segundo grupo: MANR, TANR, TANT, MAST, MASR, TASR
+        asignaciones_segundo_grupo = self.asignar_turnos_conflictos_segundo_grupo(col_dia)
+        asignaciones_totales.extend(asignaciones_segundo_grupo)
+        
+        print(f"   Primer grupo asignado: {len(asignaciones_primer_grupo)}/3 → {asignaciones_primer_grupo}")
+        print(f"   Segundo grupo asignado: {len(asignaciones_segundo_grupo)}/6 → {asignaciones_segundo_grupo}")
+        print(f"   TOTAL ASIGNADO: {len(asignaciones_totales)}/9")
+        
+        return asignaciones_totales
 
     def _actualizar_fila_conteo_operativo(self) -> None:
         """Actualiza la fila de conteo operativo estático usando la misma lógica que procesador_horarios.py"""
@@ -404,6 +551,7 @@ class AsignadorTurnosSencillos:
         
         max_col = self.ws.max_column
         asignaciones_realizadas = []
+        asignaciones_conflictos = []
         dias_sin_asignar = []
         dias_con_conflictos = []
         
@@ -417,11 +565,16 @@ class AsignadorTurnosSencillos:
             
             if not puede_asignar:
                 if razon.startswith("Turno conflictivo"):
-                    dias_con_conflictos.append((header, personal_operativo, disponibles_count, razon))
+                    # Intentar asignar turnos para días con conflictos
+                    asignaciones_conflicto = self.asignar_turnos_en_dia_con_conflictos(col)
+                    if asignaciones_conflicto:
+                        asignaciones_conflictos.append((header, asignaciones_conflicto, personal_operativo, disponibles_count))
+                    else:
+                        dias_con_conflictos.append((header, personal_operativo, disponibles_count, razon))
                 else:
                     dias_sin_asignar.append((header, personal_operativo, disponibles_count, razon))
             else:
-                # Intentar asignar
+                # Intentar asignar turnos normales
                 asignaciones = self.asignar_turnos_en_dia(col)
                 if asignaciones:
                     asignaciones_realizadas.append((header, asignaciones, personal_operativo, disponibles_count))
@@ -432,6 +585,13 @@ class AsignadorTurnosSencillos:
             print("-" * 80)
             for header, asignaciones, personal, disponibles in asignaciones_realizadas:
                 print(f"{header:>8}: {', '.join(asignaciones):40} (Personal: {personal:2d}, Disponibles: {disponibles})")
+        
+        # Mostrar asignaciones en días con conflictos
+        print(f"\n🔥 ASIGNACIONES EN DÍAS CON CONFLICTOS: {len(asignaciones_conflictos)}")
+        if asignaciones_conflictos:
+            print("-" * 80)
+            for header, asignaciones, personal, disponibles in asignaciones_conflictos:
+                print(f"{header:>8}: {', '.join(asignaciones):60} (Conflicto BLPTD/NANRD)")
         
         # Mostrar días sin asignar
         if dias_sin_asignar:
@@ -449,22 +609,31 @@ class AsignadorTurnosSencillos:
         
         # Resumen de equidad
         print(f"\n📊 RESUMEN DE EQUIDAD POR TRABAJADOR:")
-        print("-" * 80)
-        print(f"{'Trabajador':>10} {'MANR':>6} {'TANR':>6} {'MASR':>6} {'TASR':>6} {'ASIG':>6} {'TOTAL':>7}")
-        print("-" * 80)
+        print("-" * 100)
+        print(f"{'Trabajador':>10} {'MANR':>5} {'TANR':>5} {'MASR':>5} {'TASR':>5} {'ASIG':>5} {'MLPR':>5} {'TLPR':>5} {'TLPT':>5} {'TANT':>5} {'MAST':>5} {'TOTAL':>6}")
+        print("-" * 100)
         
-        for trabajador in self.TRABAJADORES_ELEGIBLES:
+        # Mostrar todos los trabajadores que pueden tener turnos
+        todos_trabajadores = set(self.TRABAJADORES_ELEGIBLES + self.TRABAJADORES_PREFERIDOS_CONFLICTOS + self.TRABAJADORES_ALTERNATIVOS_CONFLICTOS + self.TRABAJADORES_SEGUNDO_GRUPO_CONFLICTOS)
+        
+        for trabajador in sorted(todos_trabajadores):
             if self._obtener_fila_trabajador(trabajador):
                 manr = self.contador_manr[trabajador]
                 tanr = self.contador_tanr[trabajador]
                 masr = self.contador_masr[trabajador]
                 tasr = self.contador_tasr[trabajador]
                 asig = self.contador_asig[trabajador]
-                total = manr + tanr + masr + tasr + asig
-                print(f"{trabajador:>10} {manr:>6} {tanr:>6} {masr:>6} {tasr:>6} {asig:>6} {total:>7}")
+                mlpr = self.contador_mlpr[trabajador]
+                tlpr = self.contador_tlpr[trabajador]
+                tlpt = self.contador_tlpt[trabajador]
+                tant = self.contador_tant[trabajador]
+                mast = self.contador_mast[trabajador]
+                total = manr + tanr + masr + tasr + asig + mlpr + tlpr + tlpt + tant + mast
+                if total > 0:  # Solo mostrar trabajadores con turnos asignados
+                    print(f"{trabajador:>10} {manr:>5} {tanr:>5} {masr:>5} {tasr:>5} {asig:>5} {mlpr:>5} {tlpr:>5} {tlpt:>5} {tant:>5} {mast:>5} {total:>6}")
         
-        print("="*80)
-        return len(asignaciones_realizadas)
+        print("="*100)
+        return len(asignaciones_realizadas) + len(asignaciones_conflictos)
 
     def procesar_todos_los_dias(self) -> None:
         print(f"📁 Procesando archivo: {self.archivo_entrada}")

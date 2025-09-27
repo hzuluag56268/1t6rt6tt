@@ -95,13 +95,21 @@ Día: SUN-05
 - BANT
 - BLPT
 - COMS
+- MANR
 - MASA/TASA
+- MASR
+- MAST
+- MLPR
 - NANR
 - NANT
 - NLPR
 - NLPT
 - TANA/TASA
+- TANR
+- TANT
+- TASR
 - TAST/SLN3
+- TLPR
 - VACA
 - X
 
@@ -247,14 +255,23 @@ Día: SUN-12
 - BANT
 - BLPT
 - MANA
+- MANR
 - MASA
+- MASR
+- MAST
+- MLPR
 - NANR
 - NANT
 - NLPR
 - NLPT
 - TANA
+- TANR
+- TANT
 - TASA
+- TASR
 - TAST/SLN3
+- TLPR
+- TLPT
 - X
 
 ========================================
@@ -267,13 +284,22 @@ Día: MON-13
 - COMS
 - DESC
 - MANA
+- MANR
 - MASA/TASA
+- MASR
+- MAST
+- MLPR
 - NANR
 - NANT
 - NLPR
 - NLPT
 - TANA
+- TANR
+- TANT
+- TASR
 - TAST/SLN3
+- TLPR
+- TLPT
 
 ========================================
 
@@ -390,15 +416,23 @@ Día: SUN-19
 - BANT
 - BLPT
 - MANA
+- MANR
 - MASA
+- MASR
+- MAST
+- MLPR
 - NANR
 - NANT
 - NLPR
 - NLPT
 - TANA
+- TANR
+- TANT
 - TASA
+- TASR
 - TAST/SLN3
 - TLPR
+- TLPT
 - X
 
 ========================================
@@ -542,13 +576,20 @@ Día: SUN-26
 - BLPT
 - COMS
 - MANA
+- MANR
 - MASA
+- MASR
+- MAST
+- MLPR
 - NANR
 - NANT
 - NLPR
 - NLPT
 - TANA
+- TANR
+- TANT
 - TASA
+- TASR
 - TAST/SLN3
 - TLPR
 
