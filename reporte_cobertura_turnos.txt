@@ -158,12 +158,20 @@ Turnos presentes:
 
 Turnos adicionales encontrados:
 - COMS: 2 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- MASR: 1 vez(ces)
+- MAST: 1 vez(ces)
+- MLPR: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
 - NLPT: 1 vez(ces)
 - TANA/TASA: 1 vez(ces)
+- TANR: 1 vez(ces)
+- TANT: 1 vez(ces)
+- TASR: 1 vez(ces)
+- TLPR: 1 vez(ces)
 - VACA: 3 vez(ces)
 - X: 1 vez(ces)
 
@@ -390,10 +398,19 @@ Turnos presentes:
 - TAST/SLN3: 1 vez(ces)
 
 Turnos adicionales encontrados:
+- MANR: 1 vez(ces)
+- MASR: 1 vez(ces)
+- MAST: 1 vez(ces)
+- MLPR: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
 - NLPT: 1 vez(ces)
+- TANR: 1 vez(ces)
+- TANT: 1 vez(ces)
+- TASR: 1 vez(ces)
+- TLPR: 1 vez(ces)
+- TLPT: 1 vez(ces)
 - X: 1 vez(ces)
 
 ========================================
@@ -422,11 +439,20 @@ Turnos adicionales encontrados:
 - COME: 1 vez(ces)
 - COMS: 1 vez(ces)
 - DESC: 2 vez(ces)
+- MANR: 1 vez(ces)
 - MASA/TASA: 1 vez(ces)
+- MASR: 1 vez(ces)
+- MAST: 1 vez(ces)
+- MLPR: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
 - NLPT: 1 vez(ces)
+- TANR: 1 vez(ces)
+- TANT: 1 vez(ces)
+- TASR: 1 vez(ces)
+- TLPR: 1 vez(ces)
+- TLPT: 1 vez(ces)
 
 ========================================
 
@@ -603,11 +629,19 @@ Turnos presentes:
 - TAST/SLN3: 1 vez(ces)
 
 Turnos adicionales encontrados:
+- MANR: 1 vez(ces)
+- MASR: 1 vez(ces)
+- MAST: 1 vez(ces)
+- MLPR: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
 - NLPT: 1 vez(ces)
+- TANR: 1 vez(ces)
+- TANT: 1 vez(ces)
+- TASR: 1 vez(ces)
 - TLPR: 1 vez(ces)
+- TLPT: 1 vez(ces)
 - X: 1 vez(ces)
 
 ========================================
@@ -823,10 +857,17 @@ Turnos presentes:
 Turnos adicionales encontrados:
 - ???: 1 vez(ces)
 - COMS: 1 vez(ces)
+- MANR: 1 vez(ces)
+- MASR: 1 vez(ces)
+- MAST: 1 vez(ces)
+- MLPR: 1 vez(ces)
 - NANR: 1 vez(ces)
 - NANT: 1 vez(ces)
 - NLPR: 1 vez(ces)
 - NLPT: 1 vez(ces)
+- TANR: 1 vez(ces)
+- TANT: 1 vez(ces)
+- TASR: 1 vez(ces)
 - TLPR: 1 vez(ces)
 
 ========================================
