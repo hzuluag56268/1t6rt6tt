@@ -385,6 +385,273 @@ def verificar_turnos_requeridos(ws):
         
         print("\nReporte de verificación de turnos requeridos generado en: reporte_turnos_requeridos.txt")
 
+def verificar_turnos_consecutivos_prohibidos(ws):
+    """
+    Verifica que trabajadores con turno NLPR, NANR o NLPT no tengan BANT o BLPT al día siguiente.
+    Genera un reporte detallado de cualquier violación encontrada.
+    """
+    with open('reporte_turnos_consecutivos_prohibidos.txt', 'w', encoding='utf-8') as f:
+        f.write("REPORTE DE VERIFICACIÓN DE TURNOS CONSECUTIVOS PROHIBIDOS\n")
+        f.write("======================================================\n\n")
+        f.write("Verificando que trabajadores con turno NLPR, NANR o NLPT no tengan BANT o BLPT al día siguiente.\n")
+        f.write("NOTA: Para NLPT, la verificación solo se aplica si el día actual incluye el turno combinado 'BLPT/NLPR'.\n\n")
+        
+        violaciones_encontradas = []
+        
+        # Para cada trabajador (fila)
+        for fila in range(2, ws.max_row + 1):
+            trabajador = ws.cell(row=fila, column=1).value
+            if not trabajador:
+                continue
+                
+            # Para cada día (columna), avanzando de 2 en 2 por las columnas divididas
+            for col in range(2, ws.max_column - 1, 2):  # -1 para no ir al último día
+                dia_actual = ws.cell(row=1, column=col).value
+                dia_siguiente = ws.cell(row=1, column=col + 2).value
+                
+                if not dia_actual or not dia_siguiente:
+                    continue
+                
+                # Obtener turnos del día actual
+                turno_primera_actual = ws.cell(row=fila, column=col).value
+                turno_segunda_actual = ws.cell(row=fila, column=col + 1).value
+                
+                # Obtener turnos del día siguiente
+                turno_primera_siguiente = ws.cell(row=fila, column=col + 2).value
+                turno_segunda_siguiente = ws.cell(row=fila, column=col + 3).value
+                
+                # Verificar si el trabajador tiene NLPR, NANR o NLPT en el día actual
+                tiene_turno_prohibido = False
+                turno_actual = ""
+                
+                if turno_primera_actual and isinstance(turno_primera_actual, str):
+                    if not turno_primera_actual.startswith('='):  # No es una fórmula
+                        if turno_segunda_actual and isinstance(turno_segunda_actual, str) and not turno_segunda_actual.startswith('='):
+                            # Es un turno dividido
+                            turno_completo = f"{turno_primera_actual}/{turno_segunda_actual}"
+                            if "NLPR" in turno_completo or "NANR" in turno_completo or "NLPT" in turno_completo:
+                                tiene_turno_prohibido = True
+                                turno_actual = turno_completo
+                        else:
+                            # Es un turno de una columna
+                            if turno_primera_actual in ["NLPR", "NANR", "NLPT"]:
+                                tiene_turno_prohibido = True
+                                turno_actual = turno_primera_actual
+                
+                # Si tiene NLPR, NANR o NLPT, verificar el día siguiente
+                if tiene_turno_prohibido:
+                    # Verificar si el día actual incluye el turno combinado "BLPT/NLPR"
+                    dia_actual_tiene_blpt_nlpr = False
+                    
+                    # Buscar en todas las filas del día actual si existe BLPT/NLPR
+                    for fila_busqueda in range(2, ws.max_row + 1):
+                        turno_primera_busqueda = ws.cell(row=fila_busqueda, column=col).value
+                        turno_segunda_busqueda = ws.cell(row=fila_busqueda, column=col + 1).value
+                        
+                        if (turno_primera_busqueda and isinstance(turno_primera_busqueda, str) and 
+                            turno_segunda_busqueda and isinstance(turno_segunda_busqueda, str) and
+                            not turno_primera_busqueda.startswith('=') and 
+                            not turno_segunda_busqueda.startswith('=')):
+                            
+                            turno_completo_busqueda = f"{turno_primera_busqueda}/{turno_segunda_busqueda}"
+                            if turno_completo_busqueda == "BLPT/NLPR":
+                                dia_actual_tiene_blpt_nlpr = True
+                                break
+                    
+                    # Solo verificar BANT/BLPT si:
+                    # 1. El turno actual es NLPR o NANR (siempre se verifica)
+                    # 2. El turno actual es NLPT Y el día actual tiene BLPT/NLPR
+                    debe_verificar = False
+                    if "NLPR" in turno_actual or "NANR" in turno_actual:
+                        debe_verificar = True
+                    elif "NLPT" in turno_actual and dia_actual_tiene_blpt_nlpr:
+                        debe_verificar = True
+                    
+                    if debe_verificar:
+                        tiene_bant_o_blpt = False
+                        turno_siguiente = ""
+                        
+                        if turno_primera_siguiente and isinstance(turno_primera_siguiente, str):
+                            if not turno_primera_siguiente.startswith('='):  # No es una fórmula
+                                if turno_segunda_siguiente and isinstance(turno_segunda_siguiente, str) and not turno_segunda_siguiente.startswith('='):
+                                    # Es un turno dividido
+                                    turno_completo = f"{turno_primera_siguiente}/{turno_segunda_siguiente}"
+                                    if "BANT" in turno_completo or "BLPT" in turno_completo:
+                                        tiene_bant_o_blpt = True
+                                        turno_siguiente = turno_completo
+                                else:
+                                    # Es un turno de una columna
+                                    if turno_primera_siguiente in ["BANT", "BLPT"]:
+                                        tiene_bant_o_blpt = True
+                                        turno_siguiente = turno_primera_siguiente
+                        
+                        # Si hay violación, agregarla a la lista
+                        if tiene_bant_o_blpt:
+                            violaciones_encontradas.append({
+                                'trabajador': trabajador,
+                                'dia_actual': dia_actual,
+                                'dia_siguiente': dia_siguiente,
+                                'turno_actual': turno_actual,
+                                'turno_siguiente': turno_siguiente,
+                                'fila': fila,
+                                'dia_actual_tiene_blpt_nlpr': dia_actual_tiene_blpt_nlpr
+                            })
+        
+        # Escribir el reporte
+        if violaciones_encontradas:
+            f.write(f"❌ SE ENCONTRARON {len(violaciones_encontradas)} VIOLACIONES:\n\n")
+            
+            for i, violacion in enumerate(violaciones_encontradas, 1):
+                f.write(f"{i}. TRABAJADOR: {violacion['trabajador']}\n")
+                f.write(f"   Día actual ({violacion['dia_actual']}): {violacion['turno_actual']}\n")
+                f.write(f"   Día siguiente ({violacion['dia_siguiente']}): {violacion['turno_siguiente']}\n")
+                f.write(f"   Fila en Excel: {violacion['fila']}\n")
+                if 'dia_actual_tiene_blpt_nlpr' in violacion:
+                    f.write(f"   Día actual tiene BLPT/NLPR: {'Sí' if violacion['dia_actual_tiene_blpt_nlpr'] else 'No'}\n")
+                f.write(f"   ⚠️  VIOLACIÓN: {violacion['turno_actual']} seguido de {violacion['turno_siguiente']}\n\n")
+            
+            f.write("="*60 + "\n")
+            f.write("RECOMENDACIONES:\n")
+            f.write("- Revisar la asignación de turnos para estos trabajadores\n")
+            f.write("- Considerar asignar turnos de descanso o turnos diferentes\n")
+            f.write("- Verificar que se cumplan las reglas de descanso entre turnos\n")
+        else:
+            f.write("✅ NO SE ENCONTRARON VIOLACIONES\n\n")
+            f.write("Todos los trabajadores que tuvieron turno NLPR, NANR o NLPT\n")
+            f.write("NO tienen turno BANT o BLPT al día siguiente.\n")
+            f.write("Las asignaciones cumplen con las reglas establecidas.\n")
+        
+        print(f"\nReporte de verificación de turnos consecutivos prohibidos generado en: reporte_turnos_consecutivos_prohibidos.txt")
+        print(f"Violaciones encontradas: {len(violaciones_encontradas)}")
+        
+        return len(violaciones_encontradas) > 0
+
+def contar_repeticiones_turnos_especificos(ws):
+    """
+    Cuenta las repeticiones de turnos específicos en todo el archivo.
+    Genera un reporte detallado con la cantidad de veces que aparece cada turno.
+    """
+    # Lista de turnos específicos a contar
+    turnos_especificos = {
+        "BLPT": 0,
+        "MLPR": 0,
+        "NLPR": 0,
+        "TLPT": 0,
+        "NLPT": 0,
+        "TLPR": 0,
+        "BANT": 0,
+        "MAST": 0,
+        "NANR": 0,
+        "TANT": 0,
+        "NANT": 0,
+        "TAST/SLN3": 0,
+        "MANR": 0,
+        "MASR": 0,
+        "TANR": 0,
+        "TASR": 0
+    }
+    
+    # Turnos que cuentan como otros turnos (turnos divididos)
+    turnos_equivalentes = {
+        "MAST/NANR": ["MAST", "NANR"],
+        "TANT/NANT": ["TANT", "NANT"],
+        "MASR/TASR": ["MASR", "TASR"],
+        "MANR/TANR": ["MANR", "TANR"],
+        "MANR/ASIG": ["MANR"],
+        "MLPR/NLPR": ["MLPR", "NLPR"],
+        "TLPT/NLPT": ["TLPT", "NLPT"],
+        "BLPT/NLPR": ["BLPT", "NLPR"],
+        "MLPR/TLPR": ["MLPR", "TLPR"],
+        "TAST/SLN3": ["TAST/SLN3"]
+    }
+    
+    with open('reporte_repeticiones_turnos_especificos.txt', 'w', encoding='utf-8') as f:
+        f.write("REPORTE DE REPETICIONES DE TURNOS ESPECÍFICOS\n")
+        f.write("==========================================\n\n")
+        f.write("Conteo de las veces que aparecen los siguientes turnos en todo el archivo:\n\n")
+        
+        # Para cada columna (día) excepto la primera que contiene las siglas
+        for col in range(2, ws.max_column + 1, 2):  # Avanzamos de 2 en 2 por las columnas divididas
+            dia = ws.cell(row=1, column=col).value
+            if not dia:  # Si no hay día, saltamos
+                continue
+            
+            # Revisar cada turno en la columna
+            for fila in range(2, ws.max_row + 1):
+                turno_primera = ws.cell(row=fila, column=col).value
+                turno_segunda = ws.cell(row=fila, column=col + 1).value
+                
+                if turno_primera and isinstance(turno_primera, str):
+                    if not turno_primera.startswith('='):  # No es una fórmula
+                        if turno_segunda and isinstance(turno_segunda, str) and not turno_segunda.startswith('='):
+                            # Es un turno dividido
+                            turno_completo = f"{turno_primera}/{turno_segunda}"
+                            
+                            # Si el turno dividido cuenta como turnos individuales, los agregamos
+                            if turno_completo in turnos_equivalentes:
+                                for turno_equiv in turnos_equivalentes[turno_completo]:
+                                    if turno_equiv in turnos_especificos:
+                                        turnos_especificos[turno_equiv] += 1
+                            else:
+                                # Verificar si el turno completo está en la lista
+                                if turno_completo in turnos_especificos:
+                                    turnos_especificos[turno_completo] += 1
+                        else:
+                            # Es un turno de una columna
+                            if turno_primera in turnos_especificos:
+                                turnos_especificos[turno_primera] += 1
+        
+        # Escribir resultados
+        f.write("RESULTADOS DEL CONTEO:\n")
+        f.write("=====================\n\n")
+        
+        # Agrupar por categorías
+        f.write("GRUPO 1 - Turnos de Línea Principal:\n")
+        f.write("-----------------------------------\n")
+        grupo1 = ["BLPT", "MLPR", "NLPR", "TLPT", "NLPT", "TLPR"]
+        for turno in grupo1:
+            cantidad = turnos_especificos[turno]
+            f.write(f"* {turno:<8}: {cantidad:>3} veces\n")
+        
+        f.write("\nGRUPO 2 - Turnos de Análisis y Soporte:\n")
+        f.write("--------------------------------------\n")
+        grupo2 = ["BANT", "MAST", "NANR", "TANT", "NANT", "TAST/SLN3", "MANR", "MASR", "TANR", "TASR"]
+        for turno in grupo2:
+            cantidad = turnos_especificos[turno]
+            f.write(f"* {turno:<10}: {cantidad:>3} veces\n")
+        
+        # Estadísticas generales
+        total_repeticiones = sum(turnos_especificos.values())
+        turnos_con_repeticiones = sum(1 for cantidad in turnos_especificos.values() if cantidad > 0)
+        turnos_sin_repeticiones = len(turnos_especificos) - turnos_con_repeticiones
+        
+        f.write("\n" + "="*50 + "\n")
+        f.write("ESTADÍSTICAS GENERALES:\n")
+        f.write("======================\n")
+        f.write(f"Total de repeticiones encontradas: {total_repeticiones}\n")
+        f.write(f"Turnos con repeticiones: {turnos_con_repeticiones}\n")
+        f.write(f"Turnos sin repeticiones: {turnos_sin_repeticiones}\n")
+        f.write(f"Total de turnos monitoreados: {len(turnos_especificos)}\n")
+        
+        # Turnos más frecuentes
+        turnos_ordenados = sorted(turnos_especificos.items(), key=lambda x: x[1], reverse=True)
+        f.write("\nTURNOS MÁS FRECUENTES:\n")
+        f.write("=====================\n")
+        for i, (turno, cantidad) in enumerate(turnos_ordenados[:5], 1):
+            if cantidad > 0:
+                f.write(f"{i}. {turno}: {cantidad} veces\n")
+        
+        # Turnos sin repeticiones
+        turnos_sin_apariciones = [turno for turno, cantidad in turnos_especificos.items() if cantidad == 0]
+        if turnos_sin_apariciones:
+            f.write("\nTURNOS SIN APARICIONES:\n")
+            f.write("======================\n")
+            for turno in sorted(turnos_sin_apariciones):
+                f.write(f"* {turno}\n")
+        
+        print(f"\nReporte de repeticiones de turnos específicos generado en: reporte_repeticiones_turnos_especificos.txt")
+        print(f"Total de repeticiones encontradas: {total_repeticiones}")
+
 def modificar_horario_con_division_columna():
     """
     Modifica el archivo horarioUnificado_a_dividir.xlsx:
@@ -606,6 +873,16 @@ def modificar_horario_con_division_columna():
     # Verificar turnos requeridos
     print("\nVerificando presencia de turnos requeridos...")
     verificar_turnos_requeridos(nuevo_ws)
+    
+    # Verificar turnos consecutivos prohibidos
+    print("\nVerificando turnos consecutivos prohibidos...")
+    hay_violaciones = verificar_turnos_consecutivos_prohibidos(nuevo_ws)
+    if hay_violaciones:
+        print("⚠️  ADVERTENCIA: Se encontraron violaciones de turnos consecutivos prohibidos. Revise el reporte para más detalles.")
+    
+    # Contar repeticiones de turnos específicos
+    print("\nContando repeticiones de turnos específicos...")
+    contar_repeticiones_turnos_especificos(nuevo_ws)
     
     # Guardar el archivo modificado
     nombre_archivo_salida = "excel_con_division_de_columna.xlsx"
