@@ -18,6 +18,7 @@ def generar_reporte_turnos(ws):
         "6N": "MANR/TANR",
         "6S": "MASR/TASR",
         "6MT": "MLPR/TLPR",
+        "6MTD": "MLPR/TLPR",
         "3": "TAST/SLN3",
         "3D": "TAST/SLN3",
         "7": "BLPT/NLPR",
@@ -690,6 +691,7 @@ def modificar_horario_con_division_columna():
          * 6N → MANR/TANR
          * 6S → MASR/TASR
          * 6MT → MLPR/TLPR
+         * 6MTD → MLPR/TLPR
          * 3 → TAST/SLN3
          * 3D → TAST/SLN3
          * 7 → BLPT/NLPR
@@ -818,7 +820,7 @@ def modificar_horario_con_division_columna():
                 elif turno_str == "6S":
                     celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MASR")
                     celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TASR")
-                elif turno_str == "6MT":
+                elif turno_str in ["6MT", "6MTD"]:
                     celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MLPR")
                     celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TLPR")
                 elif turno_str in ["3", "3D"]:
@@ -962,6 +964,7 @@ def modificar_horario_con_division_columna():
     print("  * 6N → MANR/TANR")
     print("  * 6S → MASR/TASR")
     print("  * 6MT → MLPR/TLPR")
+    print("  * 6MTD → MLPR/TLPR")
     print("  * 3 → TAST/SLN3")
     print("  * 3D → TAST/SLN3")
     print("  * 7 → BLPT/NLPR")

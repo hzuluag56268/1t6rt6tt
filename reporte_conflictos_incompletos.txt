@@ -1,0 +1,33 @@
+REPORTE SIMPLE: DÍAS CON CONFLICTOS BLPTD/NANRD - ASIGNACIONES INCOMPLETAS
+================================================================
+
+Días donde NO se pudieron asignar los 9 turnos completos:
+
+❌ SUN-05: 8/9 turnos asignados (FALTAN 1)
+   - Primer grupo: 2/3 (faltó TLPT)
+   - Segundo grupo: 6/6 ✓
+
+❌ MON-13: 8/9 turnos asignados (FALTAN 1)  
+   - Primer grupo: 2/3 (faltó TLPT)
+   - Segundo grupo: 6/6 ✓
+
+❌ SUN-19: 7/9 turnos asignados (FALTAN 2)
+   - Primer grupo: 1/3 (faltaron TLPR, TLPT)
+   - Segundo grupo: 6/6 ✓
+
+❌ SUN-26: 7/9 turnos asignados (FALTAN 2)
+   - Primer grupo: 1/3 (faltaron TLPR, TLPT)
+   - Segundo grupo: 6/6 ✓
+
+✅ SUN-12: 9/9 turnos asignados (COMPLETO)
+   - Primer grupo: 3/3 ✓
+   - Segundo grupo: 6/6 ✓
+
+RESUMEN:
+- Total días con conflictos: 5
+- Días con asignación completa: 1 (20%)
+- Días con asignación incompleta: 4 (80%)
+- Turnos faltantes totales: 6 turnos
+
+PROBLEMA PRINCIPAL:
+La mayoría de los días con conflictos no logran asignar los 3 turnos del primer grupo (MLPR, TLPR, TLPT) debido a la limitada disponibilidad de trabajadores preferidos y alternativos.
