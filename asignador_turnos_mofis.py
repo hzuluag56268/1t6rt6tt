@@ -341,10 +341,14 @@ class AsignadorTurnosMofis:
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TASRAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TSAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"MSAS")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTASR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MASRTS")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MSTASR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTS")'
                 )
                 ws_stats.cell(row=fila_destino, column=7, value=formula_6s)
 
-                # 6N = 6N + S + N + MCORTS + MCORTN + nuevos turnos
+                # 6N = 6N + S + N + MCORTS + MCORTN + nuevos turnos + turnos adicionales
                 formula_6n = (
                     f'=COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"S")'
@@ -356,6 +360,10 @@ class AsignadorTurnosMofis:
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TNAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"MNAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"6MT")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MNTANR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MANRTN")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTANR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTN")'
                 )
                 ws_stats.cell(row=fila_destino, column=8, value=formula_6n)
 
@@ -397,10 +405,14 @@ class AsignadorTurnosMofis:
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TASRAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TSAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"MSAS")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTASR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MASRTS")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MSTASR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTS")'
                 )
                 ws_stats.cell(row=fila_destino, column=6, value=formula_6s)
 
-                # 6N = 6N + S + N + MCORTS + MCORTN + nuevos turnos
+                # 6N = 6N + S + N + MCORTS + MCORTN + nuevos turnos + turnos adicionales
                 formula_6n = (
                     f'=COUNTIF({hoja}!B{fila}:AF{fila},"6N")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"S")'
@@ -412,6 +424,10 @@ class AsignadorTurnosMofis:
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"TNAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"MNAS")'
                     f'+COUNTIF({hoja}!B{fila}:AF{fila},"6MT")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MNTANR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"MANRTN")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTANR")'
+                    f'+COUNTIF({hoja}!B{fila}:AF{fila},"ASTN")'
                 )
                 ws_stats.cell(row=fila_destino, column=7, value=formula_6n)
 
