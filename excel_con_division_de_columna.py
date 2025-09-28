@@ -25,6 +25,14 @@ def generar_reporte_turnos(ws):
         "MCORTS": "MCOR/TASA",
         "N": "MANA/TANA",
         "S": "MASA/TASA",
+        "MASRAS": "MASR/ASIG",
+        "ASTASR": "ASIG/TASR",
+        "MASRTS": "MASR/TASA",
+        "MSTASR": "MASA/TASR",
+        "MNTANR": "MANA/TANR",
+        "MANRTN": "MANR/TANA",
+        "ASTANR": "ASIG/TANR",
+        "MCORTN": "MCOR/TANA",
         
         # Turnos que ocupan solo la primera columna (se mantienen o se convierten)
         "1T": "BLPT",
@@ -323,7 +331,15 @@ def verificar_turnos_requeridos(ws):
         "MLPR/NLPR": ["MLPR", "NLPR"],
         "TLPT/NLPT": ["TLPT", "NLPT"],
         "BLPT/NLPR": ["BLPT", "NLPR"],
-        "MLPR/TLPR": ["MLPR", "TLPR"]
+        "MLPR/TLPR": ["MLPR", "TLPR"],
+        "MASR/ASIG": ["MASR"],
+        "ASIG/TASR": ["TASR"],
+        "MASR/TASA": ["MASR", "TASA"],
+        "MASA/TASR": ["MASA", "TASR"],
+        "MANA/TANR": ["MANA", "TANR"],
+        "MANR/TANA": ["MANR", "TANA"],
+        "ASIG/TANR": ["TANR"],
+        "MCOR/TANA": ["TANA"]
 
     }
     
@@ -562,7 +578,15 @@ def contar_repeticiones_turnos_especificos(ws):
         "TLPT/NLPT": ["TLPT", "NLPT"],
         "BLPT/NLPR": ["BLPT", "NLPR"],
         "MLPR/TLPR": ["MLPR", "TLPR"],
-        "TAST/SLN3": ["TAST/SLN3"]
+        "TAST/SLN3": ["TAST/SLN3"],
+        "MASR/ASIG": ["MASR"],
+        "ASIG/TASR": ["TASR"],
+        "MASR/TASA": ["MASR", "TASA"],
+        "MASA/TASR": ["MASA", "TASR"],
+        "MANA/TANR": ["MANA", "TANR"],
+        "MANR/TANA": ["MANR", "TANA"],
+        "ASIG/TANR": ["TANR"],
+        "MCOR/TANA": ["TANA"]
     }
     
     with open('reporte_repeticiones_turnos_especificos.txt', 'w', encoding='utf-8') as f:
@@ -673,6 +697,14 @@ def modificar_horario_con_division_columna():
          * MCORTS → MCOR/TASA
          * N → MANA/TANA
          * S → MASA/TASA
+         * MASRAS → MASR/ASIG
+         * ASTASR → ASIG/TASR
+         * MASRTS → MASR/TASA
+         * MSTASR → MASA/TASR
+         * MNTANR → MANA/TANR
+         * MANRTN → MANR/TANA
+         * ASTANR → ASIG/TANR
+         * MCORTN → MCOR/TANA
        - Turnos que se renombran pero ocupan solo la primera columna:
          * 1T → BLPT
          * 1 → BANT
@@ -807,6 +839,30 @@ def modificar_horario_con_division_columna():
                 elif turno_str == "S":
                     celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MASA")
                     celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TASA")
+                elif turno_str == "MASRAS":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MASR")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="ASIG")
+                elif turno_str == "ASTASR":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="ASIG")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TASR")
+                elif turno_str == "MASRTS":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MASR")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TASA")
+                elif turno_str == "MSTASR":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MASA")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TASR")
+                elif turno_str == "MNTANR":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MANA")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TANR")
+                elif turno_str == "MANRTN":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MANR")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TANA")
+                elif turno_str == "ASTANR":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="ASIG")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TANR")
+                elif turno_str == "MCORTN":
+                    celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="MCOR")
+                    celda2 = nuevo_ws.cell(row=fila, column=col_segunda, value="TANA")
                 # Turnos que se renombran pero ocupan solo la primera columna
                 elif turno_str in ["1T", "BLPTD"]:
                     celda1 = nuevo_ws.cell(row=fila, column=col_primera, value="BLPT")
@@ -913,6 +969,14 @@ def modificar_horario_con_division_columna():
     print("  * MCORTS → MCOR/TASA")
     print("  * N → MANA/TANA")
     print("  * S → MASA/TASA")
+    print("  * MASRAS → MASR/ASIG")
+    print("  * ASTASR → ASIG/TASR")
+    print("  * MASRTS → MASR/TASA")
+    print("  * MSTASR → MASA/TASR")
+    print("  * MNTANR → MANA/TANR")
+    print("  * MANRTN → MANR/TANA")
+    print("  * ASTANR → ASIG/TANR")
+    print("  * MCORTN → MCOR/TANA")
     print("- Turnos que se renombran pero ocupan solo la primera columna:")
     print("  * 1T, BLPTD → BLPT")
     print("  * 1, BANTD → BANT")

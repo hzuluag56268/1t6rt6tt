@@ -1,0 +1,27 @@
+REPORTE DE VERIFICACIÓN DE TURNOS CONSECUTIVOS PROHIBIDOS
+======================================================
+
+Verificando que trabajadores con turno NLPR, NANR o NLPT no tengan BANT o BLPT al día siguiente.
+NOTA: Para NLPT, la verificación solo se aplica si el día actual incluye el turno combinado 'BLPT/NLPR'.
+
+❌ SE ENCONTRARON 2 VIOLACIONES:
+
+1. TRABAJADOR: MAQ
+   Día actual (THU-02): TLPT/NLPT
+   Día siguiente (FRI-03): BLPT/NLPR
+   Fila en Excel: 21
+   Día actual tiene BLPT/NLPR: Sí
+   ⚠️  VIOLACIÓN: TLPT/NLPT seguido de BLPT/NLPR
+
+2. TRABAJADOR: JMV
+   Día actual (MON-20): MLPR/NLPR
+   Día siguiente (TUE-21): BLPT
+   Fila en Excel: 25
+   Día actual tiene BLPT/NLPR: No
+   ⚠️  VIOLACIÓN: MLPR/NLPR seguido de BLPT
+
+============================================================
+RECOMENDACIONES:
+- Revisar la asignación de turnos para estos trabajadores
+- Considerar asignar turnos de descanso o turnos diferentes
+- Verificar que se cumplan las reglas de descanso entre turnos

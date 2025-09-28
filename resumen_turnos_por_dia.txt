@@ -1,0 +1,709 @@
+RESUMEN DE TURNOS PRESENTES POR DÍA
+===================================
+
+
+Día: WED-01
+-----------
+- BANT
+- BLPT/NLPR
+- COME
+- COMS
+- DESC
+- LICR
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/TLPR
+- SIND
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: THU-02
+-----------
+- BANT
+- BLPT/NLPR
+- COME
+- COMS
+- LICR
+- MANR/TANR
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/TLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: FRI-03
+-----------
+- BANT
+- BLPT/NLPR
+- CMED
+- COME
+- COMS
+- DESC
+- LICR
+- MANR/TANR
+- MASR/TASR
+- MAST/NANR
+- MLPR/TLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: SAT-04
+-----------
+- BANT
+- BLPT
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: SUN-05
+-----------
+- BANT
+- BLPT
+- COMS
+- MANR
+- MASA/TASA
+- MASR
+- MAST
+- MLPR
+- NANR
+- NANT
+- NLPR
+- NLPT
+- TANA/TASA
+- TANR
+- TANT
+- TASR
+- TAST/SLN3
+- TLPR
+- VACA
+- X
+
+========================================
+
+Día: MON-06
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- VACA
+
+========================================
+
+Día: TUE-07
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/ASIG
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/NLPR
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- VACA
+
+========================================
+
+Día: WED-08
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- SIND
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: THU-09
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MDBM
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: FRI-10
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: SAT-11
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: SUN-12
+-----------
+- BANT
+- BLPT
+- MANA
+- MANR
+- MASA
+- MASR
+- MAST
+- MLPR
+- NANR
+- NANT
+- NLPR
+- NLPT
+- TANA
+- TANR
+- TANT
+- TASA
+- TASR
+- TAST/SLN3
+- TLPR
+- TLPT
+- X
+
+========================================
+
+Día: MON-13
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR
+- MASA/TASA
+- MASR
+- MAST
+- MLPR
+- NANR
+- NANT
+- NLPR
+- NLPT
+- TANA
+- TANR
+- TANT
+- TASR
+- TAST/SLN3
+- TLPR
+- TLPT
+
+========================================
+
+Día: TUE-14
+-----------
+- BANT
+- BLPT/NLPR
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/TLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPT/NLPT
+
+========================================
+
+Día: WED-15
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/NLPR
+- SIND
+- TANA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+
+========================================
+
+Día: THU-16
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: FRI-17
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MCOR
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: SAT-18
+-----------
+- BANT
+- BLPT
+- DESC
+- MANA
+- MANR/TANR
+- MASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANT/NANT
+- TASA
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: SUN-19
+-----------
+- BANT
+- BLPT
+- MANA
+- MANR
+- MASA
+- MASR
+- MAST
+- MLPR
+- NANR
+- NANT
+- NLPR
+- NLPT
+- TANA
+- TANR
+- TANT
+- TASA
+- TASR
+- TAST/SLN3
+- TLPR
+- TLPT
+- X
+
+========================================
+
+Día: MON-20
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MDBM
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+
+========================================
+
+Día: TUE-21
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+
+========================================
+
+Día: WED-22
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: THU-23
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- MANA
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: FRI-24
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- SIND
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: SAT-25
+-----------
+- BANT
+- BLPT
+- COMS
+- DESC
+- MANA
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: SUN-26
+-----------
+- ???
+- BANT
+- BLPT
+- COMS
+- MANA
+- MANR
+- MASA
+- MASR
+- MAST
+- MLPR
+- NANR
+- NANT
+- NLPR
+- NLPT
+- TANA
+- TANR
+- TANT
+- TASA
+- TASR
+- TAST/SLN3
+- TLPR
+
+========================================
+
+Día: MON-27
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MDBM
+- MLPR/NLPR
+- TANA/TASA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+
+========================================
+
+Día: TUE-28
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+
+========================================
+
+Día: WED-29
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- SIND
+- TANA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+
+========================================
+
+Día: THU-30
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANA
+- MANR/TANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MDBM
+- MLPR/NLPR
+- TANA
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================
+
+Día: FRI-31
+-----------
+- BANT
+- BLPT
+- COME
+- COMS
+- DESC
+- MANR
+- MASA/TASA
+- MASR/TASR
+- MAST/NANR
+- MLPR/NLPR
+- TANA/TASA
+- TANR
+- TANT/NANT
+- TAST/SLN3
+- TLPR
+- TLPT/NLPT
+- TROP
+- VACA
+
+========================================

@@ -1,0 +1,149 @@
+REPORTE DE VERIFICACIÓN DE TURNOS REPETIDOS POR DÍA
+===============================================
+
+Nota: Los siguientes turnos están excluidos del análisis de repeticiones:
+- DESC
+- LIBR
+- SIND
+- TROP
+- VACA
+
+
+Día: THU-02
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 6 - Trabajador: ROP
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: FRI-03
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 6 - Trabajador: ROP
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: SAT-04
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 6 - Trabajador: ROP
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: SUN-05
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 6 - Trabajador: ROP
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: MON-06
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 6 - Trabajador: ROP
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: WED-08
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: THU-09
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: FRI-10
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 8 - Trabajador: WEH
+
+
+Día: MON-20
+-----------
+* Turno COME repetido 2 veces:
+  1. Fila 3 - Trabajador: HLG
+  2. Fila 13 - Trabajador: GMT
+
+
+Día: TUE-21
+-----------
+* Turno COME repetido 2 veces:
+  1. Fila 3 - Trabajador: HLG
+  2. Fila 13 - Trabajador: GMT
+
+
+Día: WED-22
+-----------
+* Turno COME repetido 2 veces:
+  1. Fila 3 - Trabajador: HLG
+  2. Fila 13 - Trabajador: GMT
+
+
+Día: THU-23
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+* Turno COME repetido 2 veces:
+  1. Fila 3 - Trabajador: HLG
+  2. Fila 13 - Trabajador: GMT
+
+
+Día: FRI-24
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+* Turno COME repetido 2 veces:
+  1. Fila 3 - Trabajador: HLG
+  2. Fila 13 - Trabajador: GMT
+
+
+Día: SAT-25
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
+
+Día: MON-27
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
+
+Día: TUE-28
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
+
+Día: WED-29
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
+
+Día: THU-30
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
+
+Día: FRI-31
+-----------
+* Turno COMS repetido 2 veces:
+  1. Fila 2 - Trabajador: PHD
+  2. Fila 22 - Trabajador: DJO
+
